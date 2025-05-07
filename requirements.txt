@@ -1,0 +1,6 @@
+spacy
+matplotlib
+pandas
+networkx
+flask
+inflect

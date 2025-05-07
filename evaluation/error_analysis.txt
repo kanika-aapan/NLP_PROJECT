@@ -1,0 +1,221 @@
+ERROR ANALYSIS REPORT
+===================
+
+Total incorrect answers: 49/49
+
+
+WHO QUESTIONS (10 errors)
+--------------------------------------------------
+
+1. Question: Who discovered radium?
+   Expected: marie curie
+   Received: error
+
+2. Question: Who developed the theory of relativity?
+   Expected: albert einstein
+   Received: error
+
+3. Question: Who invented the phonograph?
+   Expected: thomas edison
+   Received: error
+
+4. Question: Who published On the Origin of Species?
+   Expected: charles darwin
+   Received: error
+
+5. Question: Who invented the telephone?
+   Expected: alexander graham bell
+   Received: error
+
+6. Question: Who invented the alternating current electrical system?
+   Expected: nikola tesla
+   Received: error
+
+7. Question: Who painted the Mona Lisa?
+   Expected: leonardo da vinci
+   Received: error
+
+8. Question: Who led India's independence movement?
+   Expected: mahatma gandhi
+   Received: error
+
+9. Question: Who improved the telescope in 1609?
+   Expected: galileo galilei
+   Received: error
+
+10. Question: Who commissioned the Taj Mahal?
+   Expected: shah jahan
+   Received: error
+
+
+WHEN QUESTIONS (13 errors)
+--------------------------------------------------
+
+1. Question: When did Marie Curie discover radium?
+   Expected: 1898
+   Received: error
+
+2. Question: When did Marie Curie win the Nobel Prize in Chemistry?
+   Expected: 1911
+   Received: error
+
+3. Question: When did Albert Einstein develop the theory of relativity?
+   Expected: 1905
+   Received: error
+
+4. Question: When did Albert Einstein emigrate to the United States?
+   Expected: 1933
+   Received: error
+
+5. Question: When was Isaac Newton born?
+   Expected: 1642
+   Received: error
+
+6. Question: When did Isaac Newton publish Principia Mathematica?
+   Expected: 1687
+   Received: error
+
+7. Question: When did Thomas Edison invent the phonograph?
+   Expected: 1877
+   Received: error
+
+8. Question: When did Charles Darwin publish On the Origin of Species?
+   Expected: 1859
+   Received: error
+
+9. Question: When did Alexander Graham Bell invent the telephone?
+   Expected: 1876
+   Received: error
+
+10. Question: When was Nikola Tesla born?
+   Expected: 1856
+   Received: error
+
+11. Question: When was Leonardo da Vinci born?
+   Expected: 1452
+   Received: error
+
+12. Question: When was Mahatma Gandhi assassinated?
+   Expected: 1948
+   Received: error
+
+13. Question: When was the Eiffel Tower built?
+   Expected: 1889
+   Received: error
+
+
+WHAT QUESTIONS (7 errors)
+--------------------------------------------------
+
+1. Question: What did Marie Curie discover in 1898?
+   Expected: radium
+   Received: error
+
+2. Question: What did Isaac Newton formulate?
+   Expected: laws of motion
+   Received: error
+
+3. Question: What did Thomas Edison invent in 1879?
+   Expected: light bulb
+   Received: error
+
+4. Question: What did Galileo Galilei discover?
+   Expected: four moons of jupiter
+   Received: error
+
+5. Question: What is the Taj Mahal made of?
+   Expected: white marble
+   Received: error
+
+6. Question: What is the largest ocean?
+   Expected: pacific ocean
+   Received: error
+
+7. Question: What is the largest hot desert in the world?
+   Expected: sahara desert
+   Received: error
+
+
+WHERE QUESTIONS (14 errors)
+--------------------------------------------------
+
+1. Question: Where was Marie Curie born?
+   Expected: warsaw, poland
+   Received: error
+
+2. Question: Where did Albert Einstein work?
+   Expected: swiss patent office
+   Received: error
+
+3. Question: Where was Isaac Newton born?
+   Expected: england
+   Received: error
+
+4. Question: Where did Charles Darwin travel?
+   Expected: hms beagle
+   Received: error
+
+5. Question: Where was Alexander Graham Bell born?
+   Expected: edinburgh, scotland
+   Received: error
+
+6. Question: Where was Nikola Tesla born?
+   Expected: croatia
+   Received: error
+
+7. Question: Where was Leonardo da Vinci born?
+   Expected: italy
+   Received: error
+
+8. Question: Where was Mahatma Gandhi assassinated?
+   Expected: delhi
+   Received: error
+
+9. Question: Where was Galileo Galilei born?
+   Expected: pisa, italy
+   Received: error
+
+10. Question: Where is the Eiffel Tower located?
+   Expected: paris, france
+   Received: error
+
+11. Question: Where is the Great Wall of China located?
+   Expected: northern china
+   Received: error
+
+12. Question: Where is the Taj Mahal located?
+   Expected: agra, india
+   Received: error
+
+13. Question: Where does the Amazon River flow?
+   Expected: south america
+   Received: error
+
+14. Question: Where is Mount Everest located?
+   Expected: himalayas
+   Received: error
+
+
+OTHER QUESTIONS (5 errors)
+--------------------------------------------------
+
+1. Question: How many patents did Thomas Edison have?
+   Expected: 1,093 patents
+   Received: error
+
+2. Question: How tall is the Eiffel Tower?
+   Expected: 1,083 feet
+   Received: error
+
+3. Question: How long is the Great Wall of China?
+   Expected: over 13,000 miles
+   Received: error
+
+4. Question: How long is the Amazon River?
+   Expected: 6,400 kilometers
+   Received: error
+
+5. Question: How tall is Mount Everest?
+   Expected: 8,848 meters
+   Received: error
+
