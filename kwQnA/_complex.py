@@ -12,6 +12,13 @@ class ComplexFunc:
         xdate = []
         xplace = []
         
+        # Track person entities to avoid misclassifying them as places
+        person_tokens = set()
+        for ent in sentence.ents:
+            if ent.label_ == 'PERSON':
+                for i in range(ent.start, ent.end):
+                    person_tokens.add(i)
+        
         # First pass - look for standard NER entities
         for i in sentence.ents:
             if i.label_ in ('DATE', 'TIME'):
@@ -40,88 +47,133 @@ class ComplexFunc:
         # Handle complex place references
         if not xplace:
             for token in sentence:
-                if token.pos_ == 'PROPN':
-                    # Check if it's part of a place name
-                    if any(child.dep_ == 'compound' for child in token.children):
-                        place_parts = [child.text for child in token.children if child.dep_ == 'compound']
-                        place_parts.append(token.text)
-                        xplace.append(" ".join(place_parts))
-        
-        return xdate, xplace
-
-    def find_obj(self, sentence, place, time):
-        object_list = []
-        # Initialize buffer_obj to prevent UnboundLocalError
-        buffer_obj = None
-
-        # First pass: Look for direct objects
-        for word in sentence:
-            if word.dep_ in ('obj', 'dobj', 'pobj'):
-                buffer_obj = word
-                
-                # Avoid places that are objects of prepositions like "of"
-                if str(word) in place and word.nbor(-1).dep_ in ('prep') and str(word.nbor(-1)) == "of":
+                # Skip if token is part of a PERSON entity
+                if token.i in person_tokens:
                     continue
                     
-                # Standard objects (not in time or place)
-                if str(word) not in time and str(word) not in place:
-                    # Get the full phrase for compound objects
-                    obj_phrase = self._get_full_object_phrase(word)
+                # Look for location indicators
+                is_potential_place = False
+                
+                # Check if it's a proper noun
+                if token.pos_ == 'PROPN':
+                    is_potential_place = True
+                
+                # Check for prepositions that often indicate locations
+                if token.head.lemma_ in ('in', 'at', 'from', 'to', 'near', 'by'):
+                    is_potential_place = True
+                
+                # Check for classic place adjectives
+                for child in token.children:
+                    if child.dep_ == 'amod' and child.lemma_ in ('north', 'south', 'east', 'west', 'central', 'urban', 'rural'):
+                        is_potential_place = True
+                
+                if is_potential_place:
+                    # Check if it's part of a compound name
+                    if any(child.dep_ == 'compound' for child in token.children):
+                        place_parts = [child.text for child in token.children if child.dep_ == 'compound' and child.i not in person_tokens]
+                        if place_parts:  # Only proceed if we have non-person compounds
+                            place_parts.append(token.text)
+                            xplace.append(" ".join(place_parts))
+                    # Single word place
+                    elif token.pos_ == 'PROPN' and token.ent_type_ not in ('PERSON', 'ORG'):
+                        xplace.append(token.text)
+        
+        # Additional check to remove any potential person references that made it through
+        filtered_place = []
+        subject_text = None
+        
+        # Find the subject of the sentence
+        for token in sentence:
+            if token.dep_ in ('nsubj', 'nsubjpass'):
+                subject_tokens = [token.text.lower()]
+                # Get compound parts of subject
+                for child in token.children:
+                    if child.dep_ == 'compound':
+                        subject_tokens.append(child.text.lower())
+                subject_text = " ".join(subject_tokens)
+                break
+        
+        # Filter out places that match the subject
+        for place in xplace:
+            # Skip if place name is contained in the subject or vice versa
+            if subject_text and (subject_text in place.lower() or place.lower() in subject_text):
+                continue
+            filtered_place.append(place)
+        
+        return xdate, filtered_place
+    def find_obj(self, sentence, place, time):
+            object_list = []
+            # Initialize buffer_obj to prevent UnboundLocalError
+            buffer_obj = None
+
+            # First pass: Look for direct objects
+            for word in sentence:
+                if word.dep_ in ('obj', 'dobj', 'pobj'):
+                    buffer_obj = word
                     
-                    # Check for multi-word phrases with prepositions
-                    if any(child.dep_ == 'prep' for child in word.children):
-                        for child in word.children:
-                            if child.dep_ == 'prep':
-                                # For phrases like "laws of motion"
-                                for grandchild in child.children:
-                                    if grandchild.dep_ in ('pobj'):
-                                        obj_phrase = f"{obj_phrase} {child} {grandchild}"
-                                        
-                    object_list.append(obj_phrase)
+                    # Avoid places that are objects of prepositions like "of"
+                    if str(word) in place and word.nbor(-1).dep_ in ('prep') and str(word.nbor(-1)) == "of":
+                        continue
                         
-                # Handle places as objects when not part of "of" phrases
-                elif str(word) in place and str(word.nbor(-1)) != "of":
-                    if not object_list:  # Only add if no other objects
-                        object_list.append(str(word))
-                        
-                # Handle times as objects when no other objects
-                elif str(word) in time and not object_list:
-                    object_list.append(str(word))
-        
-        # Second pass: If no direct objects found, look for prepositional objects
-        if not object_list and not buffer_obj:
-            for word in sentence:
-                if word.dep_ == 'prep':
-                    for child in word.children:
-                        if child.dep_ == 'pobj':
-                            # Special handling for time prepositions
-                            if word.text.lower() in ('in', 'on', 'at', 'during', 'by'):
-                                # Handle time objects
-                                if str(child) in time:
-                                    buffer_obj = child
-                                    object_list.append(str(child))
-                                # Handle place objects
-                                elif str(child) in place:
-                                    buffer_obj = child
-                                    object_list.append(str(child))
-                                # Handle regular objects in prepositional phrases
-                                else:
-                                    obj_phrase = self._get_full_object_phrase(child)
-                                    buffer_obj = child
-                                    object_list.append(obj_phrase)
-        
-        # If still no objects found, try to extract important nouns
-        if not object_list and not buffer_obj:
-            for word in sentence:
-                if word.pos_ == 'NOUN' and word.dep_ not in ('nsubj', 'nsubjpass'):
-                    # Exclude common stop words
-                    if word.text.lower() not in ('year', 'time', 'day', 'thing', 'person'):
+                    # Standard objects (not in time or place)
+                    if str(word) not in time and str(word) not in place:
+                        # Get the full phrase for compound objects
                         obj_phrase = self._get_full_object_phrase(word)
-                        buffer_obj = word
+                        
+                        # Check for multi-word phrases with prepositions
+                        if any(child.dep_ == 'prep' for child in word.children):
+                            for child in word.children:
+                                if child.dep_ == 'prep':
+                                    # For phrases like "laws of motion"
+                                    for grandchild in child.children:
+                                        if grandchild.dep_ in ('pobj'):
+                                            obj_phrase = f"{obj_phrase} {child} {grandchild}"
+                                            
                         object_list.append(obj_phrase)
-                        break
-        
-        return object_list, buffer_obj
+                            
+                    # Handle places as objects when not part of "of" phrases
+                    elif str(word) in place and str(word.nbor(-1)) != "of":
+                        if not object_list:  # Only add if no other objects
+                            object_list.append(str(word))
+                            
+                    # Handle times as objects when no other objects
+                    elif str(word) in time and not object_list:
+                        object_list.append(str(word))
+            
+            # Second pass: If no direct objects found, look for prepositional objects
+            if not object_list and not buffer_obj:
+                for word in sentence:
+                    if word.dep_ == 'prep':
+                        for child in word.children:
+                            if child.dep_ == 'pobj':
+                                # Special handling for time prepositions
+                                if word.text.lower() in ('in', 'on', 'at', 'during', 'by'):
+                                    # Handle time objects
+                                    if str(child) in time:
+                                        buffer_obj = child
+                                        object_list.append(str(child))
+                                    # Handle place objects
+                                    elif str(child) in place:
+                                        buffer_obj = child
+                                        object_list.append(str(child))
+                                    # Handle regular objects in prepositional phrases
+                                    else:
+                                        obj_phrase = self._get_full_object_phrase(child)
+                                        buffer_obj = child
+                                        object_list.append(obj_phrase)
+            
+            # If still no objects found, try to extract important nouns
+            if not object_list and not buffer_obj:
+                for word in sentence:
+                    if word.pos_ == 'NOUN' and word.dep_ not in ('nsubj', 'nsubjpass'):
+                        # Exclude common stop words
+                        if word.text.lower() not in ('year', 'time', 'day', 'thing', 'person'):
+                            obj_phrase = self._get_full_object_phrase(word)
+                            buffer_obj = word
+                            object_list.append(obj_phrase)
+                            break
+            
+            return object_list, buffer_obj
 
     def _get_full_object_phrase(self, word):
         """Extract full noun phrase for an object"""

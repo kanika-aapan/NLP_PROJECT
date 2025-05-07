@@ -1,10 +1,10 @@
 ERROR ANALYSIS REPORT
 ====================
 
-Total errors: 49 out of 114
+Total errors: 42 out of 114
 
 
-SEMANTIC MISMATCH ERRORS (24 instances)
+SEMANTIC MISMATCH ERRORS (23 instances)
 --------------------------------------------------
 
 1. Question: When did Marie Curie win the Nobel Prize in Chemistry?
@@ -21,7 +21,7 @@ SEMANTIC MISMATCH ERRORS (24 instances)
 
 4. Question: Who commissioned the Taj Mahal?
    Expected: shah jahan
-   Received: taj mahal,taj mahal,sun,sun
+   Received: taj mahal,taj mahal,tokyo,tokyo,sun,sun
 
 5. Question: Where is Mount Everest located?
    Expected: himalayas
@@ -41,7 +41,7 @@ SEMANTIC MISMATCH ERRORS (24 instances)
 
 9. Question: Who designed the Eiffel Tower?
    Expected: gustave eiffel
-   Received: eiffel tower
+   Received: albert einstein,albert einstein,isaac newton,thomas edison,thomas edison,charles darwin,charles darwin,alexander graham bell,leonardo da vinci,eiffel tower
 
 10. Question: What did Alexander Graham Bell teach?
    Expected: speech to the deaf
@@ -60,48 +60,48 @@ AMBIGUOUS QUESTION ERRORS (0 instances)
 --------------------------------------------------
 
 
-MISSING TIME/PLACE ERRORS (19 instances)
+MISSING TIME/PLACE ERRORS (13 instances)
 --------------------------------------------------
 
-1. Question: Where did Albert Einstein work?
-   Expected: swiss patent office
-   Received: albert einstein
-
-2. Question: When was Isaac Newton born?
-   Expected: 1642
-   Received: none
-
-3. Question: Where did Charles Darwin travel?
-   Expected: hms beagle
-   Received: charles darwin
-
-4. Question: When was Nikola Tesla born?
+1. Question: When was Nikola Tesla born?
    Expected: 1856
    Received: none
 
-5. Question: When was Leonardo da Vinci born?
-   Expected: 1452
-   Received: none
-
-6. Question: When was Mahatma Gandhi assassinated?
+2. Question: When was Mahatma Gandhi assassinated?
    Expected: 1948
    Received: none
 
-7. Question: Where is the Eiffel Tower located?
+3. Question: Where is the Eiffel Tower located?
    Expected: paris, france
    Received: the eiffel tower
 
-8. Question: Where does the Amazon River flow?
+4. Question: Where does the Amazon River flow?
    Expected: south america
    Received: amazon river
 
-9. Question: Where did Alexander Graham Bell die?
+5. Question: Where did Alexander Graham Bell die?
    Expected: 1922
-   Received: alexander graham bell
+   Received: none
 
-10. Question: Where did Mahatma Gandhi study law?
+6. Question: Where did Mahatma Gandhi study law?
    Expected: london
    Received: none
+
+7. Question: Where did Galileo Galilei teach mathematics?
+   Expected: university of padua
+   Received: galileo galilei
+
+8. Question: Where is the Amazon River basin located?
+   Expected: south america
+   Received: none
+
+9. Question: Where is the Eiffel Tower situated?
+   Expected: paris, france
+   Received: the eiffel tower
+
+10. Question: Where is the Taj Mahal situated?
+   Expected: agra, india
+   Received: taj mahal
 
 
 COMPLEX SENTENCE ERRORS (1 instances)

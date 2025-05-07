@@ -1,15 +1,15 @@
 {
   "summary": {
     "total_questions": 114,
-    "correct_answers": 65,
-    "accuracy": 0.5701754385964912,
+    "correct_answers": 72,
+    "accuracy": 0.631578947368421,
     "category_accuracies": {
       "who": 0.68,
       "what": 0.5416666666666666,
-      "when": 0.7241379310344828,
-      "where": 0.41935483870967744
+      "when": 0.7931034482758621,
+      "where": 0.5806451612903226
     },
-    "evaluation_time": 268.28922414779663
+    "evaluation_time": 203.59350657463074
   },
   "results": [
     {
@@ -34,7 +34,7 @@
       "question": "What did Marie Curie discover in 1898?",
       "question_type": "what",
       "expected_answer": "radium",
-      "model_answer": "radium,polonium",
+      "model_answer": "radium,polonium,warsaw",
       "is_correct": true,
       "sentence_length": 8,
       "syntactic_depth": 2
@@ -79,8 +79,8 @@
       "question": "Where did Albert Einstein work?",
       "question_type": "where",
       "expected_answer": "swiss patent office",
-      "model_answer": "albert einstein",
-      "is_correct": false,
+      "model_answer": "swiss patent office",
+      "is_correct": true,
       "sentence_length": 6,
       "syntactic_depth": 2
     },
@@ -106,8 +106,8 @@
       "question": "When was Isaac Newton born?",
       "question_type": "when",
       "expected_answer": "1642",
-      "model_answer": "none",
-      "is_correct": false,
+      "model_answer": "1642",
+      "is_correct": true,
       "sentence_length": 6,
       "syntactic_depth": 2
     },
@@ -187,8 +187,8 @@
       "question": "Where did Charles Darwin travel?",
       "question_type": "where",
       "expected_answer": "hms beagle",
-      "model_answer": "charles darwin",
-      "is_correct": false,
+      "model_answer": "hms beagle",
+      "is_correct": true,
       "sentence_length": 6,
       "syntactic_depth": 2
     },
@@ -259,8 +259,8 @@
       "question": "When was Leonardo da Vinci born?",
       "question_type": "when",
       "expected_answer": "1452",
-      "model_answer": "none",
-      "is_correct": false,
+      "model_answer": "1452",
+      "is_correct": true,
       "sentence_length": 7,
       "syntactic_depth": 2
     },
@@ -385,7 +385,7 @@
       "question": "Who commissioned the Taj Mahal?",
       "question_type": "who",
       "expected_answer": "shah jahan",
-      "model_answer": "taj mahal,taj mahal,sun,sun",
+      "model_answer": "taj mahal,taj mahal,tokyo,tokyo,sun,sun",
       "is_correct": false,
       "sentence_length": 6,
       "syntactic_depth": 2
@@ -475,7 +475,7 @@
       "question": "Who taught at Princeton University?",
       "question_type": "who",
       "expected_answer": "albert einstein",
-      "model_answer": "albert einstein",
+      "model_answer": "albert einstein,alexander graham bell,alexander graham bell",
       "is_correct": true,
       "sentence_length": 6,
       "syntactic_depth": 3
@@ -511,7 +511,7 @@
       "question": "Who designed the Eiffel Tower?",
       "question_type": "who",
       "expected_answer": "gustave eiffel",
-      "model_answer": "eiffel tower",
+      "model_answer": "albert einstein,albert einstein,isaac newton,thomas edison,thomas edison,charles darwin,charles darwin,alexander graham bell,leonardo da vinci,eiffel tower",
       "is_correct": false,
       "sentence_length": 6,
       "syntactic_depth": 2
@@ -520,7 +520,7 @@
       "question": "What did Albert Einstein win in 1921?",
       "question_type": "what",
       "expected_answer": "nobel prize in physics",
-      "model_answer": "nobel prize in physics,physics",
+      "model_answer": "nobel prize in physics",
       "is_correct": true,
       "sentence_length": 8,
       "syntactic_depth": 2
@@ -529,7 +529,7 @@
       "question": "What did Marie Curie win in 1903?",
       "question_type": "what",
       "expected_answer": "nobel prize in physics",
-      "model_answer": "nobel prize in physics,physics",
+      "model_answer": "nobel prize in physics,warsaw",
       "is_correct": true,
       "sentence_length": 8,
       "syntactic_depth": 2
@@ -745,7 +745,7 @@
       "question": "Where did Alexander Graham Bell die?",
       "question_type": "where",
       "expected_answer": "1922",
-      "model_answer": "alexander graham bell",
+      "model_answer": "none",
       "is_correct": false,
       "sentence_length": 7,
       "syntactic_depth": 2
@@ -772,8 +772,8 @@
       "question": "Where did Isaac Newton study?",
       "question_type": "where",
       "expected_answer": "cambridge university",
-      "model_answer": "isaac newton",
-      "is_correct": false,
+      "model_answer": "cambridge university",
+      "is_correct": true,
       "sentence_length": 6,
       "syntactic_depth": 2
     },
@@ -781,8 +781,8 @@
       "question": "Where did Charles Darwin study?",
       "question_type": "where",
       "expected_answer": "cambridge university",
-      "model_answer": "charles darwin",
-      "is_correct": false,
+      "model_answer": "cambridge university",
+      "is_correct": true,
       "sentence_length": 6,
       "syntactic_depth": 2
     },
@@ -844,8 +844,8 @@
       "question": "Where is Tokyo located?",
       "question_type": "where",
       "expected_answer": "honshu",
-      "model_answer": "tokyo",
-      "is_correct": false,
+      "model_answer": "honshu",
+      "is_correct": true,
       "sentence_length": 5,
       "syntactic_depth": 1
     },
@@ -925,7 +925,7 @@
       "question": "What did Marie Curie find in 1898?",
       "question_type": "what",
       "expected_answer": "radium",
-      "model_answer": "radium,polonium",
+      "model_answer": "radium,polonium,warsaw",
       "is_correct": true,
       "sentence_length": 8,
       "syntactic_depth": 2
@@ -961,7 +961,7 @@
       "question": "Who built the Eiffel Tower?",
       "question_type": "who",
       "expected_answer": "gustave eiffel",
-      "model_answer": "eiffel tower",
+      "model_answer": "albert einstein,albert einstein,isaac newton,charles darwin,charles darwin,eiffel tower",
       "is_correct": false,
       "sentence_length": 6,
       "syntactic_depth": 2
@@ -1006,7 +1006,7 @@
       "question": "Who found the four moons of Jupiter?",
       "question_type": "who",
       "expected_answer": "galileo galilei",
-      "model_answer": "galileo galilei",
+      "model_answer": "marie curie,marie curie,galileo galilei",
       "is_correct": true,
       "sentence_length": 8,
       "syntactic_depth": 3
@@ -1033,7 +1033,7 @@
       "question": "What did Albert Einstein get in 1921?",
       "question_type": "what",
       "expected_answer": "nobel prize in physics",
-      "model_answer": "nobel prize in physics,physics",
+      "model_answer": "nobel prize in physics",
       "is_correct": true,
       "sentence_length": 8,
       "syntactic_depth": 2
