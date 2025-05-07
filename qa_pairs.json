@@ -378,5 +378,86 @@
     {
       "question": "Where is Mount Everest found?",
       "answer": "nepal and tibet"
+    },
+    
+    {
+      "question": "Who found radium?",
+      "answer": "marie curie"
+    },
+    {
+      "question": "Who created the telephone?",
+      "answer": "alexander graham bell"
+    },
+    {
+      "question": "Who made the phonograph?",
+      "answer": "thomas edison"
+    },
+    {
+      "question": "Where is the Eiffel Tower situated?",
+      "answer": "paris, france"
+    },
+    {
+      "question": "Where is the Taj Mahal situated?",
+      "answer": "agra, india"
+    },
+    {
+      "question": "When did Albert Einstein create the theory of relativity?",
+      "answer": "1905"
+    },
+    {
+      "question": "When did Marie Curie find radium?",
+      "answer": "1898"
+    },
+    {
+      "question": "What did Marie Curie find in 1898?",
+      "answer": "radium"
+    },
+    {
+      "question": "What did Thomas Edison create in 1879?",
+      "answer": "light bulb"
+    },
+    {
+      "question": "What did Isaac Newton create?",
+      "answer": "laws of motion"
+    },
+    {
+      "question": "Who drew the Mona Lisa?",
+      "answer": "leonardo da vinci"
+    },
+    {
+      "question": "Who built the Eiffel Tower?",
+      "answer": "gustave eiffel"
+    },
+    {
+      "question": "Where was Leonardo da Vinci from?",
+      "answer": "italy"
+    },
+    {
+      "question": "When did Charles Darwin make his theory?",
+      "answer": "1859"
+    },
+    {
+      "question": "When did Thomas Edison make the phonograph?",
+      "answer": "1877"
+    },
+    {
+      "question": "Who guided India to independence?",
+      "answer": "mahatma gandhi"
+    },
+    {
+      "question": "Who found the four moons of Jupiter?",
+      "answer": "galileo galilei"
+    },
+    {
+      "question": "Where did Mahatma Gandhi learn law?",
+      "answer": "london"
+    },
+    {
+      "question": "Who made the theory of evolution?",
+      "answer": "charles darwin"
+    },
+    {
+      "question": "What did Albert Einstein get in 1921?",
+      "answer": "nobel prize in physics"
     }
   ]

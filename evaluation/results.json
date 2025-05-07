@@ -1,15 +1,15 @@
 {
   "summary": {
-    "total_questions": 94,
-    "correct_answers": 55,
-    "accuracy": 0.5851063829787234,
+    "total_questions": 114,
+    "correct_answers": 65,
+    "accuracy": 0.5701754385964912,
     "category_accuracies": {
-      "who": 0.8235294117647058,
-      "what": 0.5,
-      "when": 0.76,
-      "where": 0.4444444444444444
+      "who": 0.68,
+      "what": 0.5416666666666666,
+      "when": 0.7241379310344828,
+      "where": 0.41935483870967744
     },
-    "evaluation_time": 27.425476789474487
+    "evaluation_time": 265.82156896591187
   },
   "results": [
     {
@@ -79,7 +79,7 @@
       "question": "What did Isaac Newton formulate?",
       "question_type": "what",
       "expected_answer": "laws of motion",
-      "model_answer": "laws of motion,motion,law of gravitation,universal gravitation",
+      "model_answer": "laws of motion,motion,law of gravitation,universal gravitation,calculus",
       "is_correct": true
     },
     {
@@ -121,15 +121,15 @@
       "question": "What did Thomas Edison invent in 1879?",
       "question_type": "what",
       "expected_answer": "light bulb",
-      "model_answer": "light bulb",
+      "model_answer": "light bulb,first research laboratory",
       "is_correct": true
     },
     {
       "question": "How many patents did Thomas Edison have?",
       "question_type": "other",
       "expected_answer": "1,093 patents",
-      "model_answer": "light bulb",
-      "is_correct": false
+      "model_answer": "light bulb,1,093 patents,first research laboratory",
+      "is_correct": true
     },
     {
       "question": "Who published On the Origin of Species?",
@@ -240,7 +240,7 @@
       "question": "Who improved the telescope in 1609?",
       "question_type": "who",
       "expected_answer": "galileo galilei",
-      "model_answer": "galileo galilei",
+      "model_answer": "marie curie,alexander graham bell,mahatma gandhi,mahatma gandhi,galileo galilei,galileo galilei,eiffel tower,great wall,taj mahal,mount everest,sahara desert",
       "is_correct": true
     },
     {
@@ -303,7 +303,7 @@
       "question": "Who commissioned the Taj Mahal?",
       "question_type": "who",
       "expected_answer": "shah jahan",
-      "model_answer": "taj mahal",
+      "model_answer": "taj mahal,taj mahal,sun,sun",
       "is_correct": false
     },
     {
@@ -359,7 +359,7 @@
       "question": "Who worked with Marie Curie?",
       "question_type": "who",
       "expected_answer": "pierre curie",
-      "model_answer": "none",
+      "model_answer": "albert einstein",
       "is_correct": false
     },
     {
@@ -443,7 +443,7 @@
       "question": "What did Nikola Tesla develop in 1891?",
       "question_type": "what",
       "expected_answer": "tesla coil",
-      "model_answer": "tesla coil",
+      "model_answer": "alternating current electrical system,tesla coil",
       "is_correct": true
     },
     {
@@ -669,6 +669,146 @@
       "expected_answer": "nepal and tibet",
       "model_answer": "mount everest",
       "is_correct": false
+    },
+    {
+      "question": "Who found radium?",
+      "question_type": "who",
+      "expected_answer": "marie curie",
+      "model_answer": "marie curie",
+      "is_correct": true
+    },
+    {
+      "question": "Who created the telephone?",
+      "question_type": "who",
+      "expected_answer": "alexander graham bell",
+      "model_answer": "alexander graham bell",
+      "is_correct": true
+    },
+    {
+      "question": "Who made the phonograph?",
+      "question_type": "who",
+      "expected_answer": "thomas edison",
+      "model_answer": "eiffel tower",
+      "is_correct": false
+    },
+    {
+      "question": "Where is the Eiffel Tower situated?",
+      "question_type": "where",
+      "expected_answer": "paris, france",
+      "model_answer": "the eiffel tower",
+      "is_correct": false
+    },
+    {
+      "question": "Where is the Taj Mahal situated?",
+      "question_type": "where",
+      "expected_answer": "agra, india",
+      "model_answer": "taj mahal",
+      "is_correct": false
+    },
+    {
+      "question": "When did Albert Einstein create the theory of relativity?",
+      "question_type": "when",
+      "expected_answer": "1905",
+      "model_answer": "1905",
+      "is_correct": true
+    },
+    {
+      "question": "When did Marie Curie find radium?",
+      "question_type": "when",
+      "expected_answer": "1898",
+      "model_answer": "1898",
+      "is_correct": true
+    },
+    {
+      "question": "What did Marie Curie find in 1898?",
+      "question_type": "what",
+      "expected_answer": "radium",
+      "model_answer": "radium,polonium",
+      "is_correct": true
+    },
+    {
+      "question": "What did Thomas Edison create in 1879?",
+      "question_type": "what",
+      "expected_answer": "light bulb",
+      "model_answer": "light bulb,first research laboratory",
+      "is_correct": true
+    },
+    {
+      "question": "What did Isaac Newton create?",
+      "question_type": "what",
+      "expected_answer": "laws of motion",
+      "model_answer": "calculus",
+      "is_correct": false
+    },
+    {
+      "question": "Who drew the Mona Lisa?",
+      "question_type": "who",
+      "expected_answer": "leonardo da vinci",
+      "model_answer": "none",
+      "is_correct": false
+    },
+    {
+      "question": "Who built the Eiffel Tower?",
+      "question_type": "who",
+      "expected_answer": "gustave eiffel",
+      "model_answer": "eiffel tower",
+      "is_correct": false
+    },
+    {
+      "question": "Where was Leonardo da Vinci from?",
+      "question_type": "where",
+      "expected_answer": "italy",
+      "model_answer": "italy",
+      "is_correct": true
+    },
+    {
+      "question": "When did Charles Darwin make his theory?",
+      "question_type": "when",
+      "expected_answer": "1859",
+      "model_answer": "none",
+      "is_correct": false
+    },
+    {
+      "question": "When did Thomas Edison make the phonograph?",
+      "question_type": "when",
+      "expected_answer": "1877",
+      "model_answer": "none",
+      "is_correct": false
+    },
+    {
+      "question": "Who guided India to independence?",
+      "question_type": "who",
+      "expected_answer": "mahatma gandhi",
+      "model_answer": "none",
+      "is_correct": false
+    },
+    {
+      "question": "Who found the four moons of Jupiter?",
+      "question_type": "who",
+      "expected_answer": "galileo galilei",
+      "model_answer": "galileo galilei",
+      "is_correct": true
+    },
+    {
+      "question": "Where did Mahatma Gandhi learn law?",
+      "question_type": "where",
+      "expected_answer": "london",
+      "model_answer": "none",
+      "is_correct": false
+    },
+    {
+      "question": "Who made the theory of evolution?",
+      "question_type": "who",
+      "expected_answer": "charles darwin",
+      "model_answer": "eiffel tower",
+      "is_correct": false
+    },
+    {
+      "question": "What did Albert Einstein get in 1921?",
+      "question_type": "what",
+      "expected_answer": "nobel prize in physics",
+      "model_answer": "nobel prize in physics,physics",
+      "is_correct": true
     }
   ]
 }
