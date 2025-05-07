@@ -9,7 +9,7 @@
       "when": 0.7241379310344828,
       "where": 0.41935483870967744
     },
-    "evaluation_time": 265.82156896591187
+    "evaluation_time": 268.28922414779663
   },
   "results": [
     {
@@ -17,798 +17,1026 @@
       "question_type": "who",
       "expected_answer": "marie curie",
       "model_answer": "marie curie",
-      "is_correct": true
+      "is_correct": true,
+      "sentence_length": 4,
+      "syntactic_depth": 1
     },
     {
       "question": "When did Marie Curie discover radium?",
       "question_type": "when",
       "expected_answer": "1898",
       "model_answer": "1898",
-      "is_correct": true
+      "is_correct": true,
+      "sentence_length": 7,
+      "syntactic_depth": 2
     },
     {
       "question": "What did Marie Curie discover in 1898?",
       "question_type": "what",
       "expected_answer": "radium",
       "model_answer": "radium,polonium",
-      "is_correct": true
+      "is_correct": true,
+      "sentence_length": 8,
+      "syntactic_depth": 2
     },
     {
       "question": "Where was Marie Curie born?",
       "question_type": "where",
       "expected_answer": "warsaw, poland",
       "model_answer": "warsaw",
-      "is_correct": true
+      "is_correct": true,
+      "sentence_length": 6,
+      "syntactic_depth": 2
     },
     {
       "question": "When did Marie Curie win the Nobel Prize in Chemistry?",
       "question_type": "when",
       "expected_answer": "1911",
       "model_answer": "1903",
-      "is_correct": false
+      "is_correct": false,
+      "sentence_length": 11,
+      "syntactic_depth": 3
     },
     {
       "question": "Who developed the theory of relativity?",
       "question_type": "who",
       "expected_answer": "albert einstein",
       "model_answer": "albert einstein,charles darwin",
-      "is_correct": true
+      "is_correct": true,
+      "sentence_length": 7,
+      "syntactic_depth": 3
     },
     {
       "question": "When did Albert Einstein develop the theory of relativity?",
       "question_type": "when",
       "expected_answer": "1905",
       "model_answer": "1905",
-      "is_correct": true
+      "is_correct": true,
+      "sentence_length": 10,
+      "syntactic_depth": 3
     },
     {
       "question": "Where did Albert Einstein work?",
       "question_type": "where",
       "expected_answer": "swiss patent office",
       "model_answer": "albert einstein",
-      "is_correct": false
+      "is_correct": false,
+      "sentence_length": 6,
+      "syntactic_depth": 2
     },
     {
       "question": "When did Albert Einstein emigrate to the United States?",
       "question_type": "when",
       "expected_answer": "1933",
       "model_answer": "1933",
-      "is_correct": true
+      "is_correct": true,
+      "sentence_length": 10,
+      "syntactic_depth": 3
     },
     {
       "question": "What did Isaac Newton formulate?",
       "question_type": "what",
       "expected_answer": "laws of motion",
       "model_answer": "laws of motion,motion,law of gravitation,universal gravitation,calculus",
-      "is_correct": true
+      "is_correct": true,
+      "sentence_length": 6,
+      "syntactic_depth": 2
     },
     {
       "question": "When was Isaac Newton born?",
       "question_type": "when",
       "expected_answer": "1642",
       "model_answer": "none",
-      "is_correct": false
+      "is_correct": false,
+      "sentence_length": 6,
+      "syntactic_depth": 2
     },
     {
       "question": "Where was Isaac Newton born?",
       "question_type": "where",
       "expected_answer": "england",
       "model_answer": "england",
-      "is_correct": true
+      "is_correct": true,
+      "sentence_length": 6,
+      "syntactic_depth": 2
     },
     {
       "question": "When did Isaac Newton publish Principia Mathematica?",
       "question_type": "when",
       "expected_answer": "1687",
       "model_answer": "1687",
-      "is_correct": true
+      "is_correct": true,
+      "sentence_length": 8,
+      "syntactic_depth": 2
     },
     {
       "question": "Who invented the phonograph?",
       "question_type": "who",
       "expected_answer": "thomas edison",
       "model_answer": "thomas edison",
-      "is_correct": true
+      "is_correct": true,
+      "sentence_length": 5,
+      "syntactic_depth": 2
     },
     {
       "question": "When did Thomas Edison invent the phonograph?",
       "question_type": "when",
       "expected_answer": "1877",
       "model_answer": "1877",
-      "is_correct": true
+      "is_correct": true,
+      "sentence_length": 8,
+      "syntactic_depth": 2
     },
     {
       "question": "What did Thomas Edison invent in 1879?",
       "question_type": "what",
       "expected_answer": "light bulb",
       "model_answer": "light bulb,first research laboratory",
-      "is_correct": true
+      "is_correct": true,
+      "sentence_length": 8,
+      "syntactic_depth": 2
     },
     {
       "question": "How many patents did Thomas Edison have?",
       "question_type": "other",
       "expected_answer": "1,093 patents",
       "model_answer": "light bulb,1,093 patents,first research laboratory",
-      "is_correct": true
+      "is_correct": true,
+      "sentence_length": 8,
+      "syntactic_depth": 3
     },
     {
       "question": "Who published On the Origin of Species?",
       "question_type": "who",
       "expected_answer": "charles darwin",
       "model_answer": "charles darwin,sun",
-      "is_correct": true
+      "is_correct": true,
+      "sentence_length": 8,
+      "syntactic_depth": 4
     },
     {
       "question": "When did Charles Darwin publish On the Origin of Species?",
       "question_type": "when",
       "expected_answer": "1859",
       "model_answer": "1859",
-      "is_correct": true
+      "is_correct": true,
+      "sentence_length": 11,
+      "syntactic_depth": 4
     },
     {
       "question": "Where did Charles Darwin travel?",
       "question_type": "where",
       "expected_answer": "hms beagle",
       "model_answer": "charles darwin",
-      "is_correct": false
+      "is_correct": false,
+      "sentence_length": 6,
+      "syntactic_depth": 2
     },
     {
       "question": "Who invented the telephone?",
       "question_type": "who",
       "expected_answer": "alexander graham bell",
       "model_answer": "alexander graham bell",
-      "is_correct": true
+      "is_correct": true,
+      "sentence_length": 5,
+      "syntactic_depth": 2
     },
     {
       "question": "When did Alexander Graham Bell invent the telephone?",
       "question_type": "when",
       "expected_answer": "1876",
       "model_answer": "1876",
-      "is_correct": true
+      "is_correct": true,
+      "sentence_length": 9,
+      "syntactic_depth": 2
     },
     {
       "question": "Where was Alexander Graham Bell born?",
       "question_type": "where",
       "expected_answer": "edinburgh, scotland",
       "model_answer": "edinburgh",
-      "is_correct": true
+      "is_correct": true,
+      "sentence_length": 7,
+      "syntactic_depth": 2
     },
     {
       "question": "Who invented the alternating current electrical system?",
       "question_type": "who",
       "expected_answer": "nikola tesla",
       "model_answer": "nikola tesla",
-      "is_correct": true
+      "is_correct": true,
+      "sentence_length": 8,
+      "syntactic_depth": 2
     },
     {
       "question": "When was Nikola Tesla born?",
       "question_type": "when",
       "expected_answer": "1856",
       "model_answer": "none",
-      "is_correct": false
+      "is_correct": false,
+      "sentence_length": 6,
+      "syntactic_depth": 2
     },
     {
       "question": "Where was Nikola Tesla born?",
       "question_type": "where",
       "expected_answer": "croatia",
       "model_answer": "croatia",
-      "is_correct": true
+      "is_correct": true,
+      "sentence_length": 6,
+      "syntactic_depth": 2
     },
     {
       "question": "Who painted the Mona Lisa?",
       "question_type": "who",
       "expected_answer": "leonardo da vinci",
       "model_answer": "leonardo da vinci",
-      "is_correct": true
+      "is_correct": true,
+      "sentence_length": 6,
+      "syntactic_depth": 2
     },
     {
       "question": "When was Leonardo da Vinci born?",
       "question_type": "when",
       "expected_answer": "1452",
       "model_answer": "none",
-      "is_correct": false
+      "is_correct": false,
+      "sentence_length": 7,
+      "syntactic_depth": 2
     },
     {
       "question": "Where was Leonardo da Vinci born?",
       "question_type": "where",
       "expected_answer": "italy",
       "model_answer": "italy",
-      "is_correct": true
+      "is_correct": true,
+      "sentence_length": 7,
+      "syntactic_depth": 2
     },
     {
       "question": "Who led India's independence movement?",
       "question_type": "who",
       "expected_answer": "mahatma gandhi",
       "model_answer": "mahatma gandhi",
-      "is_correct": true
+      "is_correct": true,
+      "sentence_length": 7,
+      "syntactic_depth": 3
     },
     {
       "question": "When was Mahatma Gandhi assassinated?",
       "question_type": "when",
       "expected_answer": "1948",
       "model_answer": "none",
-      "is_correct": false
+      "is_correct": false,
+      "sentence_length": 6,
+      "syntactic_depth": 2
     },
     {
       "question": "Where was Mahatma Gandhi assassinated?",
       "question_type": "where",
       "expected_answer": "delhi",
       "model_answer": "delhi",
-      "is_correct": true
+      "is_correct": true,
+      "sentence_length": 6,
+      "syntactic_depth": 2
     },
     {
       "question": "Who improved the telescope in 1609?",
       "question_type": "who",
       "expected_answer": "galileo galilei",
       "model_answer": "marie curie,alexander graham bell,mahatma gandhi,mahatma gandhi,galileo galilei,galileo galilei,eiffel tower,great wall,taj mahal,mount everest,sahara desert",
-      "is_correct": true
+      "is_correct": true,
+      "sentence_length": 7,
+      "syntactic_depth": 2
     },
     {
       "question": "Where was Galileo Galilei born?",
       "question_type": "where",
       "expected_answer": "pisa, italy",
       "model_answer": "pisa",
-      "is_correct": true
+      "is_correct": true,
+      "sentence_length": 6,
+      "syntactic_depth": 2
     },
     {
       "question": "What did Galileo Galilei discover?",
       "question_type": "what",
       "expected_answer": "four moons of jupiter",
       "model_answer": "none",
-      "is_correct": false
+      "is_correct": false,
+      "sentence_length": 6,
+      "syntactic_depth": 2
     },
     {
       "question": "Where is the Eiffel Tower located?",
       "question_type": "where",
       "expected_answer": "paris, france",
       "model_answer": "the eiffel tower",
-      "is_correct": false
+      "is_correct": false,
+      "sentence_length": 7,
+      "syntactic_depth": 2
     },
     {
       "question": "When was the Eiffel Tower built?",
       "question_type": "when",
       "expected_answer": "1889",
       "model_answer": "1889",
-      "is_correct": true
+      "is_correct": true,
+      "sentence_length": 7,
+      "syntactic_depth": 2
     },
     {
       "question": "How tall is the Eiffel Tower?",
       "question_type": "other",
       "expected_answer": "1,083 feet",
       "model_answer": "1889",
-      "is_correct": false
+      "is_correct": false,
+      "sentence_length": 7,
+      "syntactic_depth": 2
     },
     {
       "question": "Where is the Great Wall of China located?",
       "question_type": "where",
       "expected_answer": "northern china",
       "model_answer": "the great wall of china",
-      "is_correct": false
+      "is_correct": false,
+      "sentence_length": 9,
+      "syntactic_depth": 4
     },
     {
       "question": "How long is the Great Wall of China?",
       "question_type": "other",
       "expected_answer": "over 13,000 miles",
       "model_answer": "the great wall of china",
-      "is_correct": false
+      "is_correct": false,
+      "sentence_length": 9,
+      "syntactic_depth": 3
     },
     {
       "question": "Where is the Taj Mahal located?",
       "question_type": "where",
       "expected_answer": "agra, india",
       "model_answer": "agra",
-      "is_correct": true
+      "is_correct": true,
+      "sentence_length": 7,
+      "syntactic_depth": 2
     },
     {
       "question": "Who commissioned the Taj Mahal?",
       "question_type": "who",
       "expected_answer": "shah jahan",
       "model_answer": "taj mahal,taj mahal,sun,sun",
-      "is_correct": false
+      "is_correct": false,
+      "sentence_length": 6,
+      "syntactic_depth": 2
     },
     {
       "question": "What is the Taj Mahal made of?",
       "question_type": "what",
       "expected_answer": "white marble",
       "model_answer": "white marble,mausoleum",
-      "is_correct": true
+      "is_correct": true,
+      "sentence_length": 8,
+      "syntactic_depth": 2
     },
     {
       "question": "Where does the Amazon River flow?",
       "question_type": "where",
       "expected_answer": "south america",
       "model_answer": "amazon river",
-      "is_correct": false
+      "is_correct": false,
+      "sentence_length": 7,
+      "syntactic_depth": 2
     },
     {
       "question": "How long is the Amazon River?",
       "question_type": "other",
       "expected_answer": "6,400 kilometers",
       "model_answer": "amazon river",
-      "is_correct": false
+      "is_correct": false,
+      "sentence_length": 7,
+      "syntactic_depth": 2
     },
     {
       "question": "Where is Mount Everest located?",
       "question_type": "where",
       "expected_answer": "himalayas",
       "model_answer": "mount everest",
-      "is_correct": false
+      "is_correct": false,
+      "sentence_length": 6,
+      "syntactic_depth": 2
     },
     {
       "question": "How tall is Mount Everest?",
       "question_type": "other",
       "expected_answer": "8,848 meters",
       "model_answer": "mount everest",
-      "is_correct": false
+      "is_correct": false,
+      "sentence_length": 6,
+      "syntactic_depth": 2
     },
     {
       "question": "What is the largest ocean?",
       "question_type": "what",
       "expected_answer": "pacific ocean",
       "model_answer": "none",
-      "is_correct": false
+      "is_correct": false,
+      "sentence_length": 6,
+      "syntactic_depth": 2
     },
     {
       "question": "What is the largest hot desert in the world?",
       "question_type": "what",
       "expected_answer": "sahara desert",
       "model_answer": "none",
-      "is_correct": false
+      "is_correct": false,
+      "sentence_length": 10,
+      "syntactic_depth": 4
     },
     {
       "question": "Who worked with Marie Curie?",
       "question_type": "who",
       "expected_answer": "pierre curie",
       "model_answer": "albert einstein",
-      "is_correct": false
+      "is_correct": false,
+      "sentence_length": 6,
+      "syntactic_depth": 3
     },
     {
       "question": "Who founded Bell Telephone Company?",
       "question_type": "who",
       "expected_answer": "alexander graham bell",
       "model_answer": "alexander graham bell",
-      "is_correct": true
+      "is_correct": true,
+      "sentence_length": 6,
+      "syntactic_depth": 2
     },
     {
       "question": "Who taught at Princeton University?",
       "question_type": "who",
       "expected_answer": "albert einstein",
       "model_answer": "albert einstein",
-      "is_correct": true
+      "is_correct": true,
+      "sentence_length": 6,
+      "syntactic_depth": 3
     },
     {
       "question": "Who worked with Thomas Edison?",
       "question_type": "who",
       "expected_answer": "nikola tesla",
       "model_answer": "nikola tesla",
-      "is_correct": true
+      "is_correct": true,
+      "sentence_length": 6,
+      "syntactic_depth": 3
     },
     {
       "question": "Who painted The Last Supper?",
       "question_type": "who",
       "expected_answer": "leonardo da vinci",
       "model_answer": "leonardo da vinci",
-      "is_correct": true
+      "is_correct": true,
+      "sentence_length": 6,
+      "syntactic_depth": 2
     },
     {
       "question": "Who developed calculus?",
       "question_type": "who",
       "expected_answer": "isaac newton",
       "model_answer": "isaac newton",
-      "is_correct": true
+      "is_correct": true,
+      "sentence_length": 4,
+      "syntactic_depth": 1
     },
     {
       "question": "Who designed the Eiffel Tower?",
       "question_type": "who",
       "expected_answer": "gustave eiffel",
       "model_answer": "eiffel tower",
-      "is_correct": false
+      "is_correct": false,
+      "sentence_length": 6,
+      "syntactic_depth": 2
     },
     {
       "question": "What did Albert Einstein win in 1921?",
       "question_type": "what",
       "expected_answer": "nobel prize in physics",
       "model_answer": "nobel prize in physics,physics",
-      "is_correct": true
+      "is_correct": true,
+      "sentence_length": 8,
+      "syntactic_depth": 2
     },
     {
       "question": "What did Marie Curie win in 1903?",
       "question_type": "what",
       "expected_answer": "nobel prize in physics",
       "model_answer": "nobel prize in physics,physics",
-      "is_correct": true
+      "is_correct": true,
+      "sentence_length": 8,
+      "syntactic_depth": 2
     },
     {
       "question": "What did Marie Curie discover besides radium?",
       "question_type": "what",
       "expected_answer": "polonium",
       "model_answer": "radium,polonium",
-      "is_correct": true
+      "is_correct": true,
+      "sentence_length": 8,
+      "syntactic_depth": 2
     },
     {
       "question": "What theory did Charles Darwin develop?",
       "question_type": "what",
       "expected_answer": "theory of evolution",
       "model_answer": "theory of evolution,evolution",
-      "is_correct": true
+      "is_correct": true,
+      "sentence_length": 7,
+      "syntactic_depth": 2
     },
     {
       "question": "What did Alexander Graham Bell teach?",
       "question_type": "what",
       "expected_answer": "speech to the deaf",
       "model_answer": "speech,deaf",
-      "is_correct": false
+      "is_correct": false,
+      "sentence_length": 7,
+      "syntactic_depth": 2
     },
     {
       "question": "What did Nikola Tesla develop in 1891?",
       "question_type": "what",
       "expected_answer": "tesla coil",
       "model_answer": "alternating current electrical system,tesla coil",
-      "is_correct": true
+      "is_correct": true,
+      "sentence_length": 8,
+      "syntactic_depth": 2
     },
     {
       "question": "What is the Taj Mahal?",
       "question_type": "what",
       "expected_answer": "mausoleum",
       "model_answer": "mausoleum",
-      "is_correct": true
+      "is_correct": true,
+      "sentence_length": 6,
+      "syntactic_depth": 2
     },
     {
       "question": "What is the height of the tallest sand dunes in the Sahara Desert?",
       "question_type": "what",
       "expected_answer": "180 meters",
       "model_answer": "none",
-      "is_correct": false
+      "is_correct": false,
+      "sentence_length": 14,
+      "syntactic_depth": 6
     },
     {
       "question": "What is the deepest point in the Pacific Ocean?",
       "question_type": "what",
       "expected_answer": "mariana trench",
       "model_answer": "none",
-      "is_correct": false
+      "is_correct": false,
+      "sentence_length": 10,
+      "syntactic_depth": 4
     },
     {
       "question": "What is the Sun?",
       "question_type": "what",
       "expected_answer": "g-type main-sequence star",
       "model_answer": "center of system,solar system,g,earth,billion years,red giant",
-      "is_correct": false
+      "is_correct": false,
+      "sentence_length": 5,
+      "syntactic_depth": 2
     },
     {
       "question": "What is the diameter of the Sun?",
       "question_type": "what",
       "expected_answer": "1.39 million kilometers",
       "model_answer": "none",
-      "is_correct": false
+      "is_correct": false,
+      "sentence_length": 8,
+      "syntactic_depth": 4
     },
     {
       "question": "What is the diameter of the Moon?",
       "question_type": "what",
       "expected_answer": "3,474 kilometers",
       "model_answer": "none",
-      "is_correct": false
+      "is_correct": false,
+      "sentence_length": 8,
+      "syntactic_depth": 4
     },
     {
       "question": "What did Galileo Galilei support?",
       "question_type": "what",
       "expected_answer": "heliocentric theory",
       "model_answer": "none",
-      "is_correct": false
+      "is_correct": false,
+      "sentence_length": 6,
+      "syntactic_depth": 2
     },
     {
       "question": "When did Thomas Edison invent the light bulb?",
       "question_type": "when",
       "expected_answer": "1879",
       "model_answer": "1877",
-      "is_correct": false
+      "is_correct": false,
+      "sentence_length": 9,
+      "syntactic_depth": 2
     },
     {
       "question": "When did Albert Einstein win the Nobel Prize in Physics?",
       "question_type": "when",
       "expected_answer": "1921",
       "model_answer": "1921",
-      "is_correct": true
+      "is_correct": true,
+      "sentence_length": 11,
+      "syntactic_depth": 3
     },
     {
       "question": "When did Alexander Graham Bell become a US citizen?",
       "question_type": "when",
       "expected_answer": "1882",
       "model_answer": "1882",
-      "is_correct": true
+      "is_correct": true,
+      "sentence_length": 10,
+      "syntactic_depth": 2
     },
     {
       "question": "When did Leonardo da Vinci die?",
       "question_type": "when",
       "expected_answer": "1519",
       "model_answer": "1519",
-      "is_correct": true
+      "is_correct": true,
+      "sentence_length": 7,
+      "syntactic_depth": 2
     },
     {
       "question": "When did Thomas Edison die?",
       "question_type": "when",
       "expected_answer": "1931",
       "model_answer": "1931",
-      "is_correct": true
+      "is_correct": true,
+      "sentence_length": 6,
+      "syntactic_depth": 2
     },
     {
       "question": "When did Mahatma Gandhi die?",
       "question_type": "when",
       "expected_answer": "1948",
       "model_answer": "1948",
-      "is_correct": true
+      "is_correct": true,
+      "sentence_length": 6,
+      "syntactic_depth": 2
     },
     {
       "question": "When did Charles Darwin die?",
       "question_type": "when",
       "expected_answer": "1882",
       "model_answer": "1882",
-      "is_correct": true
+      "is_correct": true,
+      "sentence_length": 6,
+      "syntactic_depth": 2
     },
     {
       "question": "When did Galileo Galilei die?",
       "question_type": "when",
       "expected_answer": "1642",
       "model_answer": "1642",
-      "is_correct": true
+      "is_correct": true,
+      "sentence_length": 6,
+      "syntactic_depth": 2
     },
     {
       "question": "When did Isaac Newton die?",
       "question_type": "when",
       "expected_answer": "1727",
       "model_answer": "1727",
-      "is_correct": true
+      "is_correct": true,
+      "sentence_length": 6,
+      "syntactic_depth": 2
     },
     {
       "question": "When did the Taj Mahal take to complete?",
       "question_type": "when",
       "expected_answer": "22 years",
       "model_answer": "22 years",
-      "is_correct": true
+      "is_correct": true,
+      "sentence_length": 9,
+      "syntactic_depth": 2
     },
     {
       "question": "When was Mount Everest first climbed?",
       "question_type": "when",
       "expected_answer": "1953",
       "model_answer": "1953",
-      "is_correct": true
+      "is_correct": true,
+      "sentence_length": 7,
+      "syntactic_depth": 2
     },
     {
       "question": "When was the Moon first visited by humans?",
       "question_type": "when",
       "expected_answer": "1969",
       "model_answer": "1969",
-      "is_correct": true
+      "is_correct": true,
+      "sentence_length": 9,
+      "syntactic_depth": 2
     },
     {
       "question": "Where did Alexander Graham Bell die?",
       "question_type": "where",
       "expected_answer": "1922",
       "model_answer": "alexander graham bell",
-      "is_correct": false
+      "is_correct": false,
+      "sentence_length": 7,
+      "syntactic_depth": 2
     },
     {
       "question": "Where did Mahatma Gandhi study law?",
       "question_type": "where",
       "expected_answer": "london",
       "model_answer": "none",
-      "is_correct": false
+      "is_correct": false,
+      "sentence_length": 7,
+      "syntactic_depth": 3
     },
     {
       "question": "Where did Mahatma Gandhi work?",
       "question_type": "where",
       "expected_answer": "south africa",
       "model_answer": "south africa",
-      "is_correct": true
+      "is_correct": true,
+      "sentence_length": 6,
+      "syntactic_depth": 2
     },
     {
       "question": "Where did Isaac Newton study?",
       "question_type": "where",
       "expected_answer": "cambridge university",
       "model_answer": "isaac newton",
-      "is_correct": false
+      "is_correct": false,
+      "sentence_length": 6,
+      "syntactic_depth": 2
     },
     {
       "question": "Where did Charles Darwin study?",
       "question_type": "where",
       "expected_answer": "cambridge university",
       "model_answer": "charles darwin",
-      "is_correct": false
+      "is_correct": false,
+      "sentence_length": 6,
+      "syntactic_depth": 2
     },
     {
       "question": "Where did Galileo Galilei teach mathematics?",
       "question_type": "where",
       "expected_answer": "university of padua",
       "model_answer": "galileo galilei",
-      "is_correct": false
+      "is_correct": false,
+      "sentence_length": 7,
+      "syntactic_depth": 2
     },
     {
       "question": "Where did Thomas Edison establish a laboratory?",
       "question_type": "where",
       "expected_answer": "menlo park",
       "model_answer": "menlo park",
-      "is_correct": true
+      "is_correct": true,
+      "sentence_length": 8,
+      "syntactic_depth": 2
     },
     {
       "question": "Where did Nikola Tesla conduct experiments?",
       "question_type": "where",
       "expected_answer": "colorado springs",
       "model_answer": "colorado springs",
-      "is_correct": true
+      "is_correct": true,
+      "sentence_length": 7,
+      "syntactic_depth": 2
     },
     {
       "question": "Where is the Amazon River basin located?",
       "question_type": "where",
       "expected_answer": "south america",
       "model_answer": "none",
-      "is_correct": false
+      "is_correct": false,
+      "sentence_length": 8,
+      "syntactic_depth": 3
     },
     {
       "question": "Where does the Nile River empty?",
       "question_type": "where",
       "expected_answer": "mediterranean sea",
       "model_answer": "nile river",
-      "is_correct": false
+      "is_correct": false,
+      "sentence_length": 7,
+      "syntactic_depth": 2
     },
     {
       "question": "Where is the Sahara Desert located?",
       "question_type": "where",
       "expected_answer": "north africa",
       "model_answer": "north africa",
-      "is_correct": true
+      "is_correct": true,
+      "sentence_length": 7,
+      "syntactic_depth": 2
     },
     {
       "question": "Where is Tokyo located?",
       "question_type": "where",
       "expected_answer": "honshu",
       "model_answer": "tokyo",
-      "is_correct": false
+      "is_correct": false,
+      "sentence_length": 5,
+      "syntactic_depth": 1
     },
     {
       "question": "Where is Mount Everest found?",
       "question_type": "where",
       "expected_answer": "nepal and tibet",
       "model_answer": "mount everest",
-      "is_correct": false
+      "is_correct": false,
+      "sentence_length": 6,
+      "syntactic_depth": 2
     },
     {
       "question": "Who found radium?",
       "question_type": "who",
       "expected_answer": "marie curie",
       "model_answer": "marie curie",
-      "is_correct": true
+      "is_correct": true,
+      "sentence_length": 4,
+      "syntactic_depth": 1
     },
     {
       "question": "Who created the telephone?",
       "question_type": "who",
       "expected_answer": "alexander graham bell",
       "model_answer": "alexander graham bell",
-      "is_correct": true
+      "is_correct": true,
+      "sentence_length": 5,
+      "syntactic_depth": 2
     },
     {
       "question": "Who made the phonograph?",
       "question_type": "who",
       "expected_answer": "thomas edison",
       "model_answer": "eiffel tower",
-      "is_correct": false
+      "is_correct": false,
+      "sentence_length": 5,
+      "syntactic_depth": 2
     },
     {
       "question": "Where is the Eiffel Tower situated?",
       "question_type": "where",
       "expected_answer": "paris, france",
       "model_answer": "the eiffel tower",
-      "is_correct": false
+      "is_correct": false,
+      "sentence_length": 7,
+      "syntactic_depth": 2
     },
     {
       "question": "Where is the Taj Mahal situated?",
       "question_type": "where",
       "expected_answer": "agra, india",
       "model_answer": "taj mahal",
-      "is_correct": false
+      "is_correct": false,
+      "sentence_length": 7,
+      "syntactic_depth": 2
     },
     {
       "question": "When did Albert Einstein create the theory of relativity?",
       "question_type": "when",
       "expected_answer": "1905",
       "model_answer": "1905",
-      "is_correct": true
+      "is_correct": true,
+      "sentence_length": 10,
+      "syntactic_depth": 3
     },
     {
       "question": "When did Marie Curie find radium?",
       "question_type": "when",
       "expected_answer": "1898",
       "model_answer": "1898",
-      "is_correct": true
+      "is_correct": true,
+      "sentence_length": 7,
+      "syntactic_depth": 2
     },
     {
       "question": "What did Marie Curie find in 1898?",
       "question_type": "what",
       "expected_answer": "radium",
       "model_answer": "radium,polonium",
-      "is_correct": true
+      "is_correct": true,
+      "sentence_length": 8,
+      "syntactic_depth": 2
     },
     {
       "question": "What did Thomas Edison create in 1879?",
       "question_type": "what",
       "expected_answer": "light bulb",
       "model_answer": "light bulb,first research laboratory",
-      "is_correct": true
+      "is_correct": true,
+      "sentence_length": 8,
+      "syntactic_depth": 2
     },
     {
       "question": "What did Isaac Newton create?",
       "question_type": "what",
       "expected_answer": "laws of motion",
       "model_answer": "calculus",
-      "is_correct": false
+      "is_correct": false,
+      "sentence_length": 6,
+      "syntactic_depth": 2
     },
     {
       "question": "Who drew the Mona Lisa?",
       "question_type": "who",
       "expected_answer": "leonardo da vinci",
       "model_answer": "none",
-      "is_correct": false
+      "is_correct": false,
+      "sentence_length": 6,
+      "syntactic_depth": 2
     },
     {
       "question": "Who built the Eiffel Tower?",
       "question_type": "who",
       "expected_answer": "gustave eiffel",
       "model_answer": "eiffel tower",
-      "is_correct": false
+      "is_correct": false,
+      "sentence_length": 6,
+      "syntactic_depth": 2
     },
     {
       "question": "Where was Leonardo da Vinci from?",
       "question_type": "where",
       "expected_answer": "italy",
       "model_answer": "italy",
-      "is_correct": true
+      "is_correct": true,
+      "sentence_length": 7,
+      "syntactic_depth": 2
     },
     {
       "question": "When did Charles Darwin make his theory?",
       "question_type": "when",
       "expected_answer": "1859",
       "model_answer": "none",
-      "is_correct": false
+      "is_correct": false,
+      "sentence_length": 8,
+      "syntactic_depth": 2
     },
     {
       "question": "When did Thomas Edison make the phonograph?",
       "question_type": "when",
       "expected_answer": "1877",
       "model_answer": "none",
-      "is_correct": false
+      "is_correct": false,
+      "sentence_length": 8,
+      "syntactic_depth": 2
     },
     {
       "question": "Who guided India to independence?",
       "question_type": "who",
       "expected_answer": "mahatma gandhi",
       "model_answer": "none",
-      "is_correct": false
+      "is_correct": false,
+      "sentence_length": 6,
+      "syntactic_depth": 2
     },
     {
       "question": "Who found the four moons of Jupiter?",
       "question_type": "who",
       "expected_answer": "galileo galilei",
       "model_answer": "galileo galilei",
-      "is_correct": true
+      "is_correct": true,
+      "sentence_length": 8,
+      "syntactic_depth": 3
     },
     {
       "question": "Where did Mahatma Gandhi learn law?",
       "question_type": "where",
       "expected_answer": "london",
       "model_answer": "none",
-      "is_correct": false
+      "is_correct": false,
+      "sentence_length": 7,
+      "syntactic_depth": 2
     },
     {
       "question": "Who made the theory of evolution?",
       "question_type": "who",
       "expected_answer": "charles darwin",
       "model_answer": "eiffel tower",
-      "is_correct": false
+      "is_correct": false,
+      "sentence_length": 7,
+      "syntactic_depth": 3
     },
     {
       "question": "What did Albert Einstein get in 1921?",
       "question_type": "what",
       "expected_answer": "nobel prize in physics",
       "model_answer": "nobel prize in physics,physics",
-      "is_correct": true
+      "is_correct": true,
+      "sentence_length": 8,
+      "syntactic_depth": 2
     }
   ]
 }

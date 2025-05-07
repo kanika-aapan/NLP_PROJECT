@@ -4,8 +4,11 @@ import sys
 import time
 import argparse
 import matplotlib.pyplot as plt
+import seaborn as sns
+import numpy as np
 from tqdm import tqdm
 import pandas as pd
+import spacy
 
 from kwQnA._exportPairs import exportToJSON
 from kwQnA._getentitypair import GetEntity
@@ -48,6 +51,69 @@ def create_output_dir(output_path):
     if output_dir and not os.path.exists(output_dir):
         os.makedirs(output_dir)
 
+def plot_performance_vs_complexity(sentence_lengths, syntactic_depths, accuracies):
+    """
+    Plot system performance against sentence complexity.
+    
+    Args:
+        sentence_lengths: List of sentence lengths
+        syntactic_depths: List of syntactic parse tree depths
+        accuracies: List of corresponding accuracies
+    """
+    plt.figure(figsize=(12, 8))
+    
+    # Calculate complexity score (combination of length and depth)
+    complexity_scores = np.array(sentence_lengths) * 0.2 + np.array(syntactic_depths) * 0.8
+    
+    # Create scatter plot
+    sc = plt.scatter(complexity_scores, accuracies, c=syntactic_depths, 
+                    cmap='viridis', alpha=0.7, s=100)
+    
+    # Add trendline
+    z = np.polyfit(complexity_scores, accuracies, 1)
+    p = np.poly1d(z)
+    plt.plot(complexity_scores, p(complexity_scores), "r--", alpha=0.8, 
+             label=f"Trend: y={z[0]:.4f}x+{z[1]:.4f}")
+    
+    plt.colorbar(sc, label='Syntactic Depth')
+    plt.xlabel('Sentence Complexity Score')
+    plt.ylabel('Accuracy')
+    plt.title('Performance vs. Sentence Complexity')
+    plt.legend()
+    plt.grid(True, alpha=0.3)
+    plt.tight_layout()
+    plt.savefig('evaluation/complexity_performance.png', dpi=300, bbox_inches='tight')
+    plt.close()
+
+def plot_error_classification(error_types, error_counts):
+    """
+    Create a horizontal bar chart of error types.
+    
+    Args:
+        error_types: List of error type names
+        error_counts: List of corresponding error counts
+    """
+    plt.figure(figsize=(12, 8))
+    
+    # Sort by frequency
+    sorted_indices = np.argsort(error_counts)
+    sorted_error_types = [error_types[i] for i in sorted_indices]
+    sorted_error_counts = [error_counts[i] for i in sorted_indices]
+    
+    # Create horizontal bar chart
+    bars = plt.barh(sorted_error_types, sorted_error_counts, color='maroon', alpha=0.8)
+    
+    # Add counts as text
+    for i, (type_name, count) in enumerate(zip(sorted_error_types, sorted_error_counts)):
+        plt.text(count + 0.5, i, str(count), va='center')
+    
+    plt.xlabel('Count')
+    plt.ylabel('Error Type')
+    plt.title('Classification of Error Types')
+    plt.tight_layout()
+    plt.savefig('evaluation/error_classification.png', dpi=300, bbox_inches='tight')
+    plt.close()
+
 def evaluate_model():
     """Run evaluation on the knowledge graph QA system"""
     args = parse_arguments()
@@ -72,6 +138,32 @@ def evaluate_model():
     getent = GetEntity()
     qa = QuestionAnswer()
     export = exportToJSON()
+    
+    # Initialize spaCy for linguistic analysis
+    try:
+        nlp = spacy.load('en_core_web_md')
+        print("Using spaCy model with word vectors")
+    except:
+        nlp = spacy.load('en_core_web_sm')
+        print("Using basic spaCy model without word vectors")
+    
+    # Initialize metrics for sentence complexity
+    sentence_lengths = []
+    syntactic_depths = []
+    accuracies_by_complexity = []
+    
+    # Initialize error classification
+    error_types = [
+        'Semantic Mismatch',       # When word meanings don't match correctly
+        'Entity Not Found',        # When the system can't find an entity
+        'Incorrect Relation',      # When the system matched the wrong relation
+        'Ambiguous Question',      # When a question could have multiple interpretations
+        'Missing Time/Place',      # When time/place constraints aren't met
+        'Complex Sentence',        # When the sentence structure is too complex
+        'Multiple Answers'         # When multiple possible answers exist
+    ]
+    error_counts = [0] * len(error_types)
+    error_examples = [[] for _ in range(len(error_types))]  # To store examples
     
     # Process evaluation text
     print("Processing evaluation text and extracting entity pairs...")
@@ -113,10 +205,34 @@ def evaluate_model():
         "where": {"correct": 0, "total": 0}
     }
     
+    # Group questions by complexity bins for later analysis
+    complexity_bins = 5
+    complexity_groups = {}
+    for i in range(complexity_bins):
+        complexity_groups[i] = {"correct": 0, "total": 0}
+    
     # Test each question
     for qa_pair in tqdm(qa_pairs, desc="Evaluating questions"):
         question = qa_pair["question"]
         expected_answer = qa_pair["answer"].lower()
+        
+        # Calculate sentence complexity metrics
+        doc = nlp(question)
+        sentence_length = len(doc)
+        sentence_lengths.append(sentence_length)
+        
+        # Calculate syntactic depth
+        max_depth = 0
+        for token in doc:
+            # Count steps to root
+            depth = 0
+            current = token
+            while current.head != current:  # While not at root
+                depth += 1
+                current = current.head
+            max_depth = max(max_depth, depth)
+        
+        syntactic_depths.append(max_depth)
         
         # Determine question type
         question_type = "other"
@@ -157,6 +273,47 @@ def evaluate_model():
             correct_answers += 1
             if question_type in categories:
                 categories[question_type]["correct"] += 1
+        else:
+            # Classify the error
+            if model_answer == "None":
+                # Entity Not Found error
+                error_counts[1] += 1
+                error_examples[1].append((question, expected_answer, model_answer))
+                
+            elif sentence_length > 15 or max_depth > 5:
+                # Complex Sentence error
+                error_counts[5] += 1
+                error_examples[5].append((question, expected_answer, model_answer))
+                
+            elif question_type == "when" and not any(t.like_num for t in nlp(model_answer)):
+                # Missing Time error
+                error_counts[4] += 1
+                error_examples[4].append((question, expected_answer, model_answer))
+                
+            elif question_type == "where" and not any(t.ent_type_ in ["GPE", "LOC"] for t in nlp(model_answer) if t.ent_type_):
+                # Missing Place error
+                error_counts[4] += 1
+                error_examples[4].append((question, expected_answer, model_answer))
+                
+            elif "," in expected_answer:
+                # Possible Multiple Answers error
+                error_counts[6] += 1
+                error_examples[6].append((question, expected_answer, model_answer))
+                
+            elif any(relation_word in question.lower() for relation_word in ["relate", "connect", "link"]):
+                # Incorrect Relation error
+                error_counts[2] += 1
+                error_examples[2].append((question, expected_answer, model_answer))
+                
+            elif any(q_word in question.lower() for q_word in ["can", "could", "possible", "might"]):
+                # Ambiguous Question error
+                error_counts[3] += 1
+                error_examples[3].append((question, expected_answer, model_answer))
+                
+            else:
+                # Default to Semantic Mismatch
+                error_counts[0] += 1
+                error_examples[0].append((question, expected_answer, model_answer))
         
         # Store result
         results.append({
@@ -164,14 +321,24 @@ def evaluate_model():
             "question_type": question_type,
             "expected_answer": expected_answer,
             "model_answer": model_answer,
-            "is_correct": is_correct
+            "is_correct": is_correct,
+            "sentence_length": sentence_length,
+            "syntactic_depth": max_depth
         })
+        
+        # Assign to complexity bin
+        complexity_score = sentence_length * 0.2 + max_depth * 0.8
+        max_complexity = 25 * 0.2 + 10 * 0.8  # Reasonable max values
+        bin_index = min(int((complexity_score / max_complexity) * complexity_bins), complexity_bins - 1)
+        
+        complexity_groups[bin_index]["total"] += 1
+        if is_correct:
+            complexity_groups[bin_index]["correct"] += 1
     
     evaluation_time = time.time() - start_time
     
     # Calculate overall accuracy
     accuracy = correct_answers / total_questions if total_questions > 0 else 0
-    
     
     # Calculate category accuracies
     category_accuracies = {}
@@ -200,6 +367,49 @@ def evaluate_model():
     # Plot accuracy chart
     plot_results(summary)
     
+    # Generate error classification visualization
+    print("\nAnalyzing error patterns...")
+    plot_error_classification(error_types, error_counts)
+    
+    # Save detailed error analysis
+    with open("evaluation/error_analysis.txt", "w") as f:
+        f.write("ERROR ANALYSIS REPORT\n")
+        f.write("====================\n\n")
+        f.write(f"Total errors: {sum(error_counts)} out of {len(results)}\n\n")
+        
+        for i, error_type in enumerate(error_types):
+            f.write(f"\n{error_type.upper()} ERRORS ({error_counts[i]} instances)\n")
+            f.write("-" * 50 + "\n\n")
+            
+            for j, (question, expected, actual) in enumerate(error_examples[i][:10]):  # Show up to 10 examples
+                f.write(f"{j+1}. Question: {question}\n")
+                f.write(f"   Expected: {expected}\n")
+                f.write(f"   Received: {actual}\n\n")
+    
+    # Generate complexity vs performance visualization
+    print("\nAnalyzing relationship between sentence complexity and accuracy...")
+    
+    # Calculate accuracy for each complexity group
+    binned_complexities = []
+    binned_accuracies = []
+    
+    for bin_index, counts in complexity_groups.items():
+        if counts["total"] > 0:
+            # Estimate the center value of this bin
+            complexity_value = (bin_index + 0.5) * (max_complexity / complexity_bins)
+            accuracy = counts["correct"] / counts["total"]
+            
+            binned_complexities.append(complexity_value)
+            binned_accuracies.append(accuracy)
+    
+    # Get individual complexity scores for scatter plot
+    complexity_scores = [sl * 0.2 + sd * 0.8 for sl, sd in zip(sentence_lengths, syntactic_depths)]
+    # Create a binary accuracy list (1 for correct, 0 for incorrect)
+    point_accuracies = [1.0 if r["is_correct"] else 0.0 for r in results]
+    
+    # Plot complexity vs performance
+    plot_performance_vs_complexity(complexity_scores, syntactic_depths, point_accuracies)
+    
     # Generate error analysis if requested
     if args.detailed:
         create_error_analysis(results)
@@ -216,6 +426,8 @@ def evaluate_model():
     
     print(f"\nDetailed results saved to {args.output}")
     print(f"Accuracy chart saved to evaluation/accuracy.png")
+    print(f"Error classification chart saved to evaluation/error_classification.png")
+    print(f"Complexity performance chart saved to evaluation/complexity_performance.png")
     
     if args.detailed:
         print(f"Error analysis saved to evaluation/error_analysis.txt")
