@@ -1,15 +1,15 @@
 {
   "summary": {
-    "total_questions": 49,
-    "correct_answers": 29,
-    "accuracy": 0.5918367346938775,
+    "total_questions": 94,
+    "correct_answers": 55,
+    "accuracy": 0.5851063829787234,
     "category_accuracies": {
-      "who": 0.9,
-      "what": 0.5714285714285714,
-      "when": 0.6153846153846154,
-      "where": 0.5714285714285714
+      "who": 0.8235294117647058,
+      "what": 0.5,
+      "when": 0.76,
+      "where": 0.4444444444444444
     },
-    "evaluation_time": 19.53666043281555
+    "evaluation_time": 27.425476789474487
   },
   "results": [
     {
@@ -353,6 +353,321 @@
       "question_type": "what",
       "expected_answer": "sahara desert",
       "model_answer": "none",
+      "is_correct": false
+    },
+    {
+      "question": "Who worked with Marie Curie?",
+      "question_type": "who",
+      "expected_answer": "pierre curie",
+      "model_answer": "none",
+      "is_correct": false
+    },
+    {
+      "question": "Who founded Bell Telephone Company?",
+      "question_type": "who",
+      "expected_answer": "alexander graham bell",
+      "model_answer": "alexander graham bell",
+      "is_correct": true
+    },
+    {
+      "question": "Who taught at Princeton University?",
+      "question_type": "who",
+      "expected_answer": "albert einstein",
+      "model_answer": "albert einstein",
+      "is_correct": true
+    },
+    {
+      "question": "Who worked with Thomas Edison?",
+      "question_type": "who",
+      "expected_answer": "nikola tesla",
+      "model_answer": "nikola tesla",
+      "is_correct": true
+    },
+    {
+      "question": "Who painted The Last Supper?",
+      "question_type": "who",
+      "expected_answer": "leonardo da vinci",
+      "model_answer": "leonardo da vinci",
+      "is_correct": true
+    },
+    {
+      "question": "Who developed calculus?",
+      "question_type": "who",
+      "expected_answer": "isaac newton",
+      "model_answer": "isaac newton",
+      "is_correct": true
+    },
+    {
+      "question": "Who designed the Eiffel Tower?",
+      "question_type": "who",
+      "expected_answer": "gustave eiffel",
+      "model_answer": "eiffel tower",
+      "is_correct": false
+    },
+    {
+      "question": "What did Albert Einstein win in 1921?",
+      "question_type": "what",
+      "expected_answer": "nobel prize in physics",
+      "model_answer": "nobel prize in physics,physics",
+      "is_correct": true
+    },
+    {
+      "question": "What did Marie Curie win in 1903?",
+      "question_type": "what",
+      "expected_answer": "nobel prize in physics",
+      "model_answer": "nobel prize in physics,physics",
+      "is_correct": true
+    },
+    {
+      "question": "What did Marie Curie discover besides radium?",
+      "question_type": "what",
+      "expected_answer": "polonium",
+      "model_answer": "radium,polonium",
+      "is_correct": true
+    },
+    {
+      "question": "What theory did Charles Darwin develop?",
+      "question_type": "what",
+      "expected_answer": "theory of evolution",
+      "model_answer": "theory of evolution,evolution",
+      "is_correct": true
+    },
+    {
+      "question": "What did Alexander Graham Bell teach?",
+      "question_type": "what",
+      "expected_answer": "speech to the deaf",
+      "model_answer": "speech,deaf",
+      "is_correct": false
+    },
+    {
+      "question": "What did Nikola Tesla develop in 1891?",
+      "question_type": "what",
+      "expected_answer": "tesla coil",
+      "model_answer": "tesla coil",
+      "is_correct": true
+    },
+    {
+      "question": "What is the Taj Mahal?",
+      "question_type": "what",
+      "expected_answer": "mausoleum",
+      "model_answer": "mausoleum",
+      "is_correct": true
+    },
+    {
+      "question": "What is the height of the tallest sand dunes in the Sahara Desert?",
+      "question_type": "what",
+      "expected_answer": "180 meters",
+      "model_answer": "none",
+      "is_correct": false
+    },
+    {
+      "question": "What is the deepest point in the Pacific Ocean?",
+      "question_type": "what",
+      "expected_answer": "mariana trench",
+      "model_answer": "none",
+      "is_correct": false
+    },
+    {
+      "question": "What is the Sun?",
+      "question_type": "what",
+      "expected_answer": "g-type main-sequence star",
+      "model_answer": "center of system,solar system,g,earth,billion years,red giant",
+      "is_correct": false
+    },
+    {
+      "question": "What is the diameter of the Sun?",
+      "question_type": "what",
+      "expected_answer": "1.39 million kilometers",
+      "model_answer": "none",
+      "is_correct": false
+    },
+    {
+      "question": "What is the diameter of the Moon?",
+      "question_type": "what",
+      "expected_answer": "3,474 kilometers",
+      "model_answer": "none",
+      "is_correct": false
+    },
+    {
+      "question": "What did Galileo Galilei support?",
+      "question_type": "what",
+      "expected_answer": "heliocentric theory",
+      "model_answer": "none",
+      "is_correct": false
+    },
+    {
+      "question": "When did Thomas Edison invent the light bulb?",
+      "question_type": "when",
+      "expected_answer": "1879",
+      "model_answer": "1877",
+      "is_correct": false
+    },
+    {
+      "question": "When did Albert Einstein win the Nobel Prize in Physics?",
+      "question_type": "when",
+      "expected_answer": "1921",
+      "model_answer": "1921",
+      "is_correct": true
+    },
+    {
+      "question": "When did Alexander Graham Bell become a US citizen?",
+      "question_type": "when",
+      "expected_answer": "1882",
+      "model_answer": "1882",
+      "is_correct": true
+    },
+    {
+      "question": "When did Leonardo da Vinci die?",
+      "question_type": "when",
+      "expected_answer": "1519",
+      "model_answer": "1519",
+      "is_correct": true
+    },
+    {
+      "question": "When did Thomas Edison die?",
+      "question_type": "when",
+      "expected_answer": "1931",
+      "model_answer": "1931",
+      "is_correct": true
+    },
+    {
+      "question": "When did Mahatma Gandhi die?",
+      "question_type": "when",
+      "expected_answer": "1948",
+      "model_answer": "1948",
+      "is_correct": true
+    },
+    {
+      "question": "When did Charles Darwin die?",
+      "question_type": "when",
+      "expected_answer": "1882",
+      "model_answer": "1882",
+      "is_correct": true
+    },
+    {
+      "question": "When did Galileo Galilei die?",
+      "question_type": "when",
+      "expected_answer": "1642",
+      "model_answer": "1642",
+      "is_correct": true
+    },
+    {
+      "question": "When did Isaac Newton die?",
+      "question_type": "when",
+      "expected_answer": "1727",
+      "model_answer": "1727",
+      "is_correct": true
+    },
+    {
+      "question": "When did the Taj Mahal take to complete?",
+      "question_type": "when",
+      "expected_answer": "22 years",
+      "model_answer": "22 years",
+      "is_correct": true
+    },
+    {
+      "question": "When was Mount Everest first climbed?",
+      "question_type": "when",
+      "expected_answer": "1953",
+      "model_answer": "1953",
+      "is_correct": true
+    },
+    {
+      "question": "When was the Moon first visited by humans?",
+      "question_type": "when",
+      "expected_answer": "1969",
+      "model_answer": "1969",
+      "is_correct": true
+    },
+    {
+      "question": "Where did Alexander Graham Bell die?",
+      "question_type": "where",
+      "expected_answer": "1922",
+      "model_answer": "alexander graham bell",
+      "is_correct": false
+    },
+    {
+      "question": "Where did Mahatma Gandhi study law?",
+      "question_type": "where",
+      "expected_answer": "london",
+      "model_answer": "none",
+      "is_correct": false
+    },
+    {
+      "question": "Where did Mahatma Gandhi work?",
+      "question_type": "where",
+      "expected_answer": "south africa",
+      "model_answer": "south africa",
+      "is_correct": true
+    },
+    {
+      "question": "Where did Isaac Newton study?",
+      "question_type": "where",
+      "expected_answer": "cambridge university",
+      "model_answer": "isaac newton",
+      "is_correct": false
+    },
+    {
+      "question": "Where did Charles Darwin study?",
+      "question_type": "where",
+      "expected_answer": "cambridge university",
+      "model_answer": "charles darwin",
+      "is_correct": false
+    },
+    {
+      "question": "Where did Galileo Galilei teach mathematics?",
+      "question_type": "where",
+      "expected_answer": "university of padua",
+      "model_answer": "galileo galilei",
+      "is_correct": false
+    },
+    {
+      "question": "Where did Thomas Edison establish a laboratory?",
+      "question_type": "where",
+      "expected_answer": "menlo park",
+      "model_answer": "menlo park",
+      "is_correct": true
+    },
+    {
+      "question": "Where did Nikola Tesla conduct experiments?",
+      "question_type": "where",
+      "expected_answer": "colorado springs",
+      "model_answer": "colorado springs",
+      "is_correct": true
+    },
+    {
+      "question": "Where is the Amazon River basin located?",
+      "question_type": "where",
+      "expected_answer": "south america",
+      "model_answer": "none",
+      "is_correct": false
+    },
+    {
+      "question": "Where does the Nile River empty?",
+      "question_type": "where",
+      "expected_answer": "mediterranean sea",
+      "model_answer": "nile river",
+      "is_correct": false
+    },
+    {
+      "question": "Where is the Sahara Desert located?",
+      "question_type": "where",
+      "expected_answer": "north africa",
+      "model_answer": "north africa",
+      "is_correct": true
+    },
+    {
+      "question": "Where is Tokyo located?",
+      "question_type": "where",
+      "expected_answer": "honshu",
+      "model_answer": "tokyo",
+      "is_correct": false
+    },
+    {
+      "question": "Where is Mount Everest found?",
+      "question_type": "where",
+      "expected_answer": "nepal and tibet",
+      "model_answer": "mount everest",
       "is_correct": false
     }
   ]

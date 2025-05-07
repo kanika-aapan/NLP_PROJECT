@@ -172,6 +172,7 @@ def evaluate_model():
     # Calculate overall accuracy
     accuracy = correct_answers / total_questions if total_questions > 0 else 0
     
+    
     # Calculate category accuracies
     category_accuracies = {}
     for category, data in categories.items():

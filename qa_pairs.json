@@ -194,5 +194,189 @@
     {
       "question": "What is the largest hot desert in the world?",
       "answer": "sahara desert"
+    },
+    
+    {
+      "question": "Who worked with Marie Curie?",
+      "answer": "pierre curie"
+    },
+    {
+      "question": "Who founded Bell Telephone Company?",
+      "answer": "alexander graham bell"
+    },
+    {
+      "question": "Who taught at Princeton University?",
+      "answer": "albert einstein"
+    },
+    {
+      "question": "Who worked with Thomas Edison?",
+      "answer": "nikola tesla"
+    },
+    {
+      "question": "Who painted The Last Supper?",
+      "answer": "leonardo da vinci"
+    },
+    {
+      "question": "Who developed calculus?",
+      "answer": "isaac newton"
+    },
+    {
+      "question": "Who designed the Eiffel Tower?",
+      "answer": "gustave eiffel"
+    },
+    
+    {
+      "question": "What did Albert Einstein win in 1921?",
+      "answer": "nobel prize in physics"
+    },
+    {
+      "question": "What did Marie Curie win in 1903?",
+      "answer": "nobel prize in physics"
+    },
+    {
+      "question": "What did Marie Curie discover besides radium?",
+      "answer": "polonium"
+    },
+    {
+      "question": "What theory did Charles Darwin develop?",
+      "answer": "theory of evolution"
+    },
+    {
+      "question": "What did Alexander Graham Bell teach?",
+      "answer": "speech to the deaf"
+    },
+    {
+      "question": "What did Nikola Tesla develop in 1891?",
+      "answer": "tesla coil"
+    },
+    {
+      "question": "What is the Taj Mahal?",
+      "answer": "mausoleum"
+    },
+    {
+      "question": "What is the height of the tallest sand dunes in the Sahara Desert?",
+      "answer": "180 meters"
+    },
+    {
+      "question": "What is the deepest point in the Pacific Ocean?",
+      "answer": "mariana trench"
+    },
+    {
+      "question": "What is the Sun?",
+      "answer": "g-type main-sequence star"
+    },
+    {
+      "question": "What is the diameter of the Sun?",
+      "answer": "1.39 million kilometers"
+    },
+    {
+      "question": "What is the diameter of the Moon?",
+      "answer": "3,474 kilometers"
+    },
+    {
+      "question": "What did Galileo Galilei support?",
+      "answer": "heliocentric theory"
+    },
+    
+    {
+      "question": "When did Thomas Edison invent the light bulb?",
+      "answer": "1879"
+    },
+    {
+      "question": "When did Albert Einstein win the Nobel Prize in Physics?",
+      "answer": "1921"
+    },
+    {
+      "question": "When did Alexander Graham Bell become a US citizen?",
+      "answer": "1882"
+    },
+    {
+      "question": "When did Leonardo da Vinci die?",
+      "answer": "1519"
+    },
+    {
+      "question": "When did Thomas Edison die?",
+      "answer": "1931"
+    },
+    {
+      "question": "When did Mahatma Gandhi die?",
+      "answer": "1948"
+    },
+    {
+      "question": "When did Charles Darwin die?",
+      "answer": "1882"
+    },
+    {
+      "question": "When did Galileo Galilei die?",
+      "answer": "1642"
+    },
+    {
+      "question": "When did Isaac Newton die?",
+      "answer": "1727"
+    },
+    {
+      "question": "When did the Taj Mahal take to complete?",
+      "answer": "22 years"
+    },
+    {
+      "question": "When was Mount Everest first climbed?",
+      "answer": "1953"
+    },
+    {
+      "question": "When was the Moon first visited by humans?",
+      "answer": "1969"
+    },
+    
+    {
+      "question": "Where did Alexander Graham Bell die?",
+      "answer": "1922"
+    },
+    {
+      "question": "Where did Mahatma Gandhi study law?",
+      "answer": "london"
+    },
+    {
+      "question": "Where did Mahatma Gandhi work?",
+      "answer": "south africa"
+    },
+    {
+      "question": "Where did Isaac Newton study?",
+      "answer": "cambridge university"
+    },
+    {
+      "question": "Where did Charles Darwin study?",
+      "answer": "cambridge university"
+    },
+    {
+      "question": "Where did Galileo Galilei teach mathematics?",
+      "answer": "university of padua"
+    },
+    {
+      "question": "Where did Thomas Edison establish a laboratory?",
+      "answer": "menlo park"
+    },
+    {
+      "question": "Where did Nikola Tesla conduct experiments?",
+      "answer": "colorado springs"
+    },
+    {
+      "question": "Where is the Amazon River basin located?",
+      "answer": "south america"
+    },
+    {
+      "question": "Where does the Nile River empty?",
+      "answer": "mediterranean sea"
+    },
+    {
+      "question": "Where is the Sahara Desert located?",
+      "answer": "north africa"
+    },
+    {
+      "question": "Where is Tokyo located?",
+      "answer": "honshu"
+    },
+    {
+      "question": "Where is Mount Everest found?",
+      "answer": "nepal and tibet"
     }
   ]
